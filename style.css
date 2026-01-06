@@ -249,6 +249,47 @@ body {
   font-size: 20px;
 }
 
+.els-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.els-card p {
+  font-size: 18px;
+  color: #94a3b8;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.els-card strong {
+  color: #6366f1;
+}
+
+.els-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.els-card li {
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #94a3b8;
+}
+
+.els-card li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #0ea5e9;
+  font-size: 20px;
+}
+
 
 .skills-grid {
   display: grid;
