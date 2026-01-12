@@ -476,6 +476,117 @@ body {
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 }
 
+.communication-section {
+  background: var(--color-white);
+  padding: 100px 0;
+  border-top: 1px solid var(--color-light-bg);
+}
+
+.comm-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.comm-bento-card {
+  background: var(--color-light-bg);
+  padding: 40px 30px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid transparent;
+}
+
+.comm-bento-card:hover {
+  transform: translateY(-10px);
+  background: white;
+  border-color: rgba(0, 199, 172, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 199, 172, 0.1);
+}
+
+.bento-icon {
+  font-size: 30px;
+  color: var(--color-main);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.comm-bento-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 5px;
+}
+
+.bento-tag {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.bento-tag.advanced {
+  color: var(--color-main);
+}
+
+.bento-tag.intermediate {
+  color: #f59e0b;
+}
+
+.bento-stat {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-dark);
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.bento-stat small {
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.bento-bar-container {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bento-bar {
+  height: 100%;
+  background: var(--color-main);
+  border-radius: 3px;
+}
+
+/* Background Decorations */
+.comm-bento-card::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: var(--color-main);
+  border-radius: 50%;
+  opacity: 0.03;
+  transition: all 0.4s ease;
+}
+
+.comm-bento-card:hover::after {
+  transform: scale(1.5);
+  opacity: 0.05;
+}
+
 @media (max-width: 768px) {
   .contact-buttons {
     flex-direction: column;
