@@ -251,25 +251,6 @@ body {
 }
 
 
-.education-section {
-  background: var(--color-white);
-  padding-top: 80px;
-}
-
-.education-card,
-.els-card {
-  background: var(--color-light-bg);
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  margin-top: 30px;
-}
-
-.education-card h3 {
-  color: var(--color-main);
-  margin-bottom: 10px;
-}
-
 .skills-section {
   background: var(--color-white);
 }
@@ -293,6 +274,15 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid black;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-box:hover {
+  transform: translateY(-10px);
+    background: white;
+  box-shadow: 0 20px 40px rgba(0, 199, 172, 0.1);
+  
 }
 
 .skill-box .water {
@@ -404,6 +394,7 @@ body {
   background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
 
 .project-screenshot {
   width: 100%;
