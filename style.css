@@ -217,22 +217,8 @@ body {
   gap: 50px;
 }
 
-.about-img-wrapper {
-  flex: 0 0 350px;
-}
+/* Old wrappers removed */
 
-.about-profile-img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-
-.about-profile-img:hover {
-  filter: grayscale(0%);
-}
 
 .about-text {
   flex: 1;
@@ -248,6 +234,135 @@ body {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 400;
+  opacity: 0.9;
+}
+
+.achievement-highlight {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--color-white);
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 0 12px 12px 0;
+  backdrop-filter: blur(5px);
+}
+
+.achievement-highlight h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievement-highlight p {
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Collage Styles */
+.about-collage {
+  flex: 0 0 450px;
+  position: relative;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collage-item {
+  position: absolute;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  border: 4px solid var(--color-white);
+}
+
+.main-img {
+  width: 300px;
+  z-index: 2;
+  transform: rotate(-3deg);
+  left: 20px;
+  top: 50px;
+}
+
+.main-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.achievement-img {
+  width: 280px;
+  z-index: 3;
+  right: 20px;
+  bottom: 50px;
+  transform: rotate(4deg);
+}
+
+.achievement-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.collage-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--color-dark);
+  color: var(--color-main);
+  padding: 6px 15px;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-collage:hover .main-img {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 4;
+}
+
+.about-collage:hover .main-img img {
+  filter: grayscale(0%);
+}
+
+.about-collage:hover .achievement-img {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 4;
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text .section-title {
+    text-align: center;
+  }
+
+  .about-collage {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+  }
+
+  .main-img {
+    left: 15%;
+    width: 250px;
+  }
+
+  .achievement-img {
+    right: 15%;
+    width: 230px;
+  }
 }
 
 
