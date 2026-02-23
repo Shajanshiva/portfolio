@@ -280,11 +280,11 @@ body {
 }
 
 .main-img {
-  width: 300px;
+  width: 350px;
   z-index: 2;
   transform: rotate(-3deg);
-  left: 20px;
-  top: 50px;
+  left: 10px;
+  top: 30px;
 }
 
 .main-img img {
