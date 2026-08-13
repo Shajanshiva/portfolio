@@ -964,6 +964,15 @@ body {
   line-height: 1.5;
 }
 
+/* Skills SVG Icon Styling for Postman */
+.skills-svg-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ff6c37;
+  display: inline-block;
+  transition: fill 0.5s ease;
+}
+
 
 @media (max-width: 768px) {
   .experience-header {
